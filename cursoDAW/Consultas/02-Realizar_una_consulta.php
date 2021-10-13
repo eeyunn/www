@@ -32,7 +32,7 @@ while($row = mysqli_fetch_array($result))
 	print("Forma1: " . $row[0] . " || " . $row[1]);
 	print("<br>");
 	
-	print("Forma2: " . $row['NOMBRE']. " || " . $row['APELLIDOS']);
+	print("Forma2: " . $row['NOMBRE']. " || " . $row['APELLIDOS']); //ESTA MEJOR, SE ENTIENDE NO?
 	print("<br>");
 	
 	print("------------------------------");
