@@ -5,16 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <?php
-        function prueba(){
-            print("Pa casa");
-        }
-        include("funciones1.php");
+    <?
+        include("cookies1.php");
     ?>
 </head>
 <body>
     <?php
-        prueba2();
+        print("La cookie dice que " . $_COOKIE['nombreDeUsuario']);
     ?>
 </body>
 </html>
