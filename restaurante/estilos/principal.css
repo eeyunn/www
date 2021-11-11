@@ -1,0 +1,13 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body header h1 {
+    font-family: 'Abril Fatface';
+    color: #006EB9;
+    border-bottom: 1px solid #006EB9;
+}
