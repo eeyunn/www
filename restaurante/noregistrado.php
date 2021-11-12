@@ -25,17 +25,19 @@
                 <img src="./img/logologin.png" id="icon" alt="User Icon" />
             </div>
 
+            <div class="aviso">
+                Usted no está registrado
+            </div>
             <!-- Login Form -->
             <form>
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
                 <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
-                <input type="text" id="login" class="fadeIn fourth" name="login" placeholder="E-mail">
-                
+                <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <input type="submit" class="fadeIn fourth" value="CREAR CUENTA">
+                <a class="underlineHover" href="./crearcuenta.php">Crear una cuenta</a>
             </div>
 
         </div>
