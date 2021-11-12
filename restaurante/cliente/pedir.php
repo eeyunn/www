@@ -18,11 +18,9 @@
 
         body header h1 {
             font-family: 'Abril Fatface';
+
         }
 
-        .cabecera {
-            max-width: 100%;
-        }
 
         .imagen {
             max-height: 100%;
@@ -34,29 +32,33 @@
             height: 150px;
         }
 
-        .bg-dark,
-        .navbar-expand-sm {
+        .navbar.navbar-expand-sm.bg-dark.navbar-dark {
             background-color: #006EB9;
+            color: white;
         }
 
-        footer {
-            height:auto;
+        .navbar-dark {
+            background-color: #006EB9;
+            color: white;
+        }
+
+        #mensaje {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="p-5 bg-image text-white text-center " style="background-image: url('../img/cabecera.jpg'); ">
-            <h1>Casanova a la Brasa</h1>
-            <p>DE LA RIBERA A TU PLATO</p>
-        </div>
+    <div class="container-fluid">
+        <header>
+            <div class="row p-5 bg-image text-white text-center cabecera" style="background-image: url('../img/cabecera.jpg'); ">
+                <h1>Casanova a la brasa</h1>
+                <p>DE LA RIBERA A TU PLATO</p>
+            </div>
 
+        </header>
 
-    </header>
-
-
-    <div class="row">
+        <div class="row">
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark flex-column flex-sm-row">
 
 
@@ -65,33 +67,39 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <a class="navbar-brand d-flex justify-content-center align-content-between" href="#">
+                    <a class="navbar-brand d-flex justify-content-start align-content-start" href="#">
                         <span class="material-icons md-48">
                             restaurant_menu
                         </span>
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Bienvenida</a>
+                            <a class="nav-link active" href="index.php">Bienvenida</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pedir.php">Realizar un Pedido</a>
+                            <a class="nav-link" href="#">Realizar un Pedido</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.php">Contacto</a>
                         </li>
 
                         <!--Derecha-->
+
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item ms-auto">
-                            <a class="nav-link d-flex justify-content-center align-content-between" href="#">
+                            <a class="nav-link d-flex justify-content-start align-content-start" href="#">
                                 <span class="material-icons">
                                     account_circle&nbsp;
                                 </span>
                                 Usuario
                             </a>
                         </li>
-                        <li class="nav-item ms-auto ">
-                            <a class="nav-link d-flex justify-content-center align-content-between" href="#">
+
+
+
+                        <li class="nav-item ms-auto pull-right ">
+                            <a class="nav-link d-flex justify-content-start align-content-between" href="#">
                                 <span class="material-icons">
                                     logout&nbsp;
                                 </span>
@@ -113,10 +121,10 @@
                     <h3 class="mt-4">Enlaces</h3>
                     <ul class="nav nav-pills flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bienvenida</a>
+                            <a class="nav-link" href="index.php">Bienvenida</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pedir.php">Realizar un Pedido</a>
+                            <a class="nav-link active" href="#">Realizar un Pedido</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>

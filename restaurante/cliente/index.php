@@ -18,15 +18,8 @@
 
         body header h1 {
             font-family: 'Abril Fatface';
-            
         }
 
-        .cabecera {
-            background-color: rgba(255, 255, 255, 0.3);
-            background-blend-mode: lighten;
-            font-weight: bold;
-            outline: 2px dashed #006EB9;
-        }
 
         .imagen {
             max-height: 100%;
@@ -51,17 +44,84 @@
         #mensaje {
             text-align: center;
         }
+
+        header {
+            position: relative;
+            background-color: black;
+            height: 100vh;
+            min-height: 25rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        /* Media Query for devices withi coarse pointers and no hover functionality */
+
+        /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+        @media (pointer: coarse) and (hover: none) {
+            header {
+                background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+            }
+
+            header video {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <header>
-            <div class="row p-5 bg-image text-white text-center cabecera" style="background-image: url('../img/cabecera.jpg'); ">
-                <h1>Casanova a la Brasa</h1>
-                <p>DE LA RIBERA A TU PLATO</p>
-            </div>
 
+            <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+            <div class="overlay"></div>
+
+            <!-- The HTML5 video element that will create the background video on the header -->
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="../img/video.mp4" type="video/mp4">
+            </video>
+
+            <!-- The header content -->
+            <div class="container h-100">
+                <div class="d-flex h-100 text-center align-items-center">
+                    <div class="w-100 text-white">
+                        <h1 class="display-3">Casanova a la brasa</h1>
+                        <p class="lead mb-0">De la Ribera a tu plato</p>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <div class="row">
@@ -73,7 +133,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <a class="navbar-brand d-flex justify-content-center align-content-between" href="#">
+                    <a class="navbar-brand d-flex justify-content-start align-content-start" href="#">
                         <span class="material-icons md-48">
                             restaurant_menu
                         </span>
@@ -90,16 +150,22 @@
                         </li>
 
                         <!--Derecha-->
+
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item ms-auto">
-                            <a class="nav-link d-flex justify-content-center align-content-between" href="#">
+                            <a class="nav-link d-flex justify-content-start align-content-start" href="#">
                                 <span class="material-icons">
                                     account_circle&nbsp;
                                 </span>
                                 Usuario
                             </a>
                         </li>
-                        <li class="nav-item ms-auto ">
-                            <a class="nav-link d-flex justify-content-center align-content-between" href="#">
+
+
+
+                        <li class="nav-item ms-auto pull-right ">
+                            <a class="nav-link d-flex justify-content-start align-content-between" href="#">
                                 <span class="material-icons">
                                     logout&nbsp;
                                 </span>
@@ -110,59 +176,62 @@
                 </div>
             </nav>
         </div>
-        <div class="container mt-3">
-            <div class="row" id="mensaje">
-                <div class="col">
-                    <h1>Bienvenido a Casanova a la brasa,
-                        <?php
-                        print "Manuel";
-                        ?>
-                    </h1>
+
+        <section>
+            <div class="container mt-3">
+                <div class="row" id="mensaje">
+                    <div class="col">
+                        <h1>Bienvenido a Casanova a la brasa,
+                            <?php
+                            print "Manuel";
+                            ?>
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h2>Sobre Nosotros</h2>
-                    <h6>Estamos situados en C/La Marrana nº 5, en la Ribera de Molina</h6>
-                    <div class="imagen"><img class="img-fluid" src="../img/restaurante.jpg"></div>
-                    <p>O melhor restaurante do mondo</p>
-                    <span class="material-icons">
-                        restaurant_menu
-                    </span>
-                    <h3 class="mt-4">Enlaces</h3>
-                    <ul class="nav nav-pills flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bienvenida</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pedir.php">Realizar un Pedido</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://c8.alamy.com/compes/2e8narw/yilmaz-karaman-alias-lil-maaaa-poso-en-su-restaurante-chez-diyar-un-restaurante-situado-en-el-distrito-18-de-paris-francia-el-8-de-agosto-de-2007-este-inmigrante-turco-que-vende-kebabs-lanzo-con-emi-su-primer-single-karaman-compuso-una-cancion-sobre-su-trabajo-come-kebab-come-kebab-mi-amigo-para-entretener-a-sus-clientes-habituales-afortunadamente-para-el-entre-sus-clientes-hay-algunos-empleados-de-un-estudio-de-grabacion-cercano-foto-de-jules-motte-abacapress-com-2e8narw.jpg">Kebab Amigo</a>
-                        </li>
-                    </ul>
-                    <hr class="d-sm-none">
-                </div>
-                <div class="col-sm-8">
-                    <h2>CASANOVA A LA BRASA, ESTRELLA MICHELÍN</h2>
-                    <h5>tucutucutut, 7 Marzo 2021</h5>
-                    <div><img class="img-fluid" src="../img/laostia.jpg"></div>
-                    <p>Como vuelva a ver un puto Lorem Ipsum, llamo a la Policía.</p>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>Sobre Nosotros</h2>
+                        <h6>Estamos situados en C/La Marrana nº 5, en la Ribera de Molina</h6>
+                        <div class="imagen"><img class="img-fluid" src="../img/restaurante.jpg"></div>
+                        <p>O melhor restaurante do mondo</p>
+                        <span class="material-icons">
+                            restaurant_menu
+                        </span>
+                        <h3 class="mt-4">Enlaces</h3>
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Bienvenida</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pedir.php">Realizar un Pedido</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.php">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://c8.alamy.com/compes/2e8narw/yilmaz-karaman-alias-lil-maaaa-poso-en-su-restaurante-chez-diyar-un-restaurante-situado-en-el-distrito-18-de-paris-francia-el-8-de-agosto-de-2007-este-inmigrante-turco-que-vende-kebabs-lanzo-con-emi-su-primer-single-karaman-compuso-una-cancion-sobre-su-trabajo-come-kebab-come-kebab-mi-amigo-para-entretener-a-sus-clientes-habituales-afortunadamente-para-el-entre-sus-clientes-hay-algunos-empleados-de-un-estudio-de-grabacion-cercano-foto-de-jules-motte-abacapress-com-2e8narw.jpg">Kebab Amigo</a>
+                            </li>
+                        </ul>
+                        <hr class="d-sm-none">
+                    </div>
 
-                    <h2 class="mt-5">TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2020</h5>
-                    <div class="fakeimg">Fake Image</div>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <div class="col-sm-8">
+                        <h2>CASANOVA A LA BRASA, ESTRELLA MICHELÍN</h2>
+                        <h5>tucutucutut, 7 Marzo 2021</h5>
+                        <div><img class="img-fluid" src="../img/laostia.jpg"></div>
+                        <p>Como vuelva a ver un puto Lorem Ipsum, llamo a la Policía.</p>
+
+                        <h2 class="mt-5">TITLE HEADING</h2>
+                        <h5>Title description, Sep 2, 2020</h5>
+                        <div class="fakeimg">Fake Image</div>
+                        <p>Some text..</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </section>
         <footer>
             <div class="mt-5 p-4 bg-dark text-white text-center">
                 <p>Copirrai Josep Illá</p>
