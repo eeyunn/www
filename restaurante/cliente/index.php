@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap 5 Website Example</title>
+    <title>Restaurante Casanova a la brasa</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@
 
         header video {
             position: absolute;
-            top: 50%;
+            top: 35%;
             left: 50%;
             min-width: 100%;
             min-height: 100%;
@@ -98,6 +98,10 @@
                 display: none;
             }
         }
+
+        #logo {
+            height: 7em;
+        }
     </style>
 </head>
 
@@ -133,11 +137,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <a class="navbar-brand d-flex justify-content-start align-content-start" href="#">
-                        <span class="material-icons md-48">
-                            restaurant_menu
-                        </span>
-                    </a>
+
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Bienvenida</a>
@@ -181,14 +181,18 @@
             <div class="container mt-3">
                 <div class="row" id="mensaje">
                     <div class="col">
-                        <h1>Bienvenido a Casanova a la brasa,
+
+                        <h2>Bienvenido a Casanova a la brasa,
                             <?php
                             print "Manuel";
                             ?>
-                        </h1>
+                        </h2>
+                        <br>
+                        <img src="../img/logo.png" id="logo">
                     </div>
                 </div>
             </div>
+            <br>
             <div class="container mt-3">
                 <div class="row">
                     <div class="col-sm-4">
@@ -218,6 +222,7 @@
                     </div>
 
                     <div class="col-sm-8">
+                        <h2>Noticias</h2>
                         <h2>CASANOVA A LA BRASA, ESTRELLA MICHELÍN</h2>
                         <h5>tucutucutut, 7 Marzo 2021</h5>
                         <div><img class="img-fluid" src="../img/laostia.jpg"></div>
