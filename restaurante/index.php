@@ -114,6 +114,23 @@
 </head>
 
 <body>
+    <?php
+    //creamos la conexion
+    $conn = mysqli_connect('localHost', 'root', '');
+    //Imprimos el error si se ha producido
+    echo mysqli_error($conn);
+
+
+    //Seleccionamos la base de datos
+    mysqli_select_db($conn, 'pruebas');
+    //Imprimos el error si se ha producido
+    echo mysqli_error($conn);
+
+    mysqli_close($conn);
+
+    ?>
+
+
     <div class="container-fluid">
         <header>
 
@@ -166,7 +183,7 @@
 
 
                         <li class="nav-item ms-md-auto">
-                            <a class="nav-link d-flex justify-content-start align-content-between" href='#'>
+                            <a class="nav-link d-flex justify-content-start align-content-between" href='crearcuenta.php'>
                                 <span class="material-icons">
                                     login&nbsp;
                                 </span>

@@ -28,7 +28,7 @@
             <!-- Login Form -->
             <form>
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
-                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
                 <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
             </form>
 
