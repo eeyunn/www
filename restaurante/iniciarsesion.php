@@ -22,23 +22,15 @@
 
             <!-- Icon -->
             <div class="fadeIn first">
-                <img src="./img/logologin.png" id="icon" alt="User Icon" />
+                <img src="./img/logo.png" id="icon" alt="User Icon" />
             </div>
 
-            <div class="aviso">
-                Usted no está registrado
-            </div>
             <!-- Login Form -->
             <form>
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
                 <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
-                <input type="submit" class="fadeIn fourth" value="Log In">
+                <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
             </form>
-
-            <!-- Remind Passowrd -->
-            <div id="formFooter">
-                <a class="underlineHover" href="./crearcuenta.php">Crear una cuenta</a>
-            </div>
 
         </div>
     </div>

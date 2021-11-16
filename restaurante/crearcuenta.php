@@ -22,13 +22,15 @@
 
             <!-- Icon -->
             <div class="fadeIn first">
-                <img src="./img/logologin.png" id="icon" alt="User Icon" />
+                <img src="./img/logo.png" id="icon" alt="User Icon" />
             </div>
 
             <!-- Login Form -->
             <form>
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
                 <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
+                <input type="text" id="login" class="fadeIn fourth" name="login" placeholder="E-mail">
+                <input type="date" id="birthday" name="birthday">
                 <input type="text" id="login" class="fadeIn fourth" name="login" placeholder="E-mail">
                 
             </form>
