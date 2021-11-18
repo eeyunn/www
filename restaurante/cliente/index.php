@@ -115,7 +115,7 @@
 
 <body>
     <div class="container-fluid">
-        <header>
+        <header class="p-0 m-0 g-0">
 
             <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
             <div class="overlay"></div>
@@ -134,6 +134,9 @@
                     </div>
                 </div>
             </div>
+        </header>
+
+
         </header>
 
         <div class="row">
@@ -166,7 +169,7 @@
                                 <span class="material-icons">
                                     account_circle&nbsp;
                                 </span>
-                                Iniciar Sesión
+                                Usuario
                             </a>
                             <div class="dropdown-menu p-3">
                                 <form class="form-horizontal" method="post" accept-charset="UTF-8">

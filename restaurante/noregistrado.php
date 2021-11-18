@@ -25,17 +25,35 @@
                 <img src="./img/logo.png" id="icon" alt="User Icon" />
             </div>
 
+            <div class="aviso">
+                Usted no está registrado
+            </div>
             <!-- Login Form -->
+
+            <?php
+            //creamos la conexion
+            $conn = mysqli_connect('localHost', 'root', '');
+            //Imprimos el error si se ha producido
+            echo mysqli_error($conn);
+
+
+            //Seleccionamos la base de datos
+            mysqli_select_db($conn, 'pruebas');
+            //Imprimos el error si se ha producido
+            echo mysqli_error($conn);
+
+            mysqli_close($conn);
+
+            ?>
             <form>
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario" required>
-                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" required>
-                <input type="text" id="login" class="fadeIn fourth" name="login" placeholder="E-mail" required>
-                
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
+                <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <input type="submit" class="fadeIn fourth" value="CREAR CUENTA">
+                <a class="underlineHover" href="./crearcuenta.php">Crear una cuenta</a>
             </div>
 
         </div>
