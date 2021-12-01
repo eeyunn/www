@@ -67,17 +67,12 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <a class="navbar-brand d-flex justify-content-start align-content-start" href="#">
-                        <span class="material-icons md-48">
-                            restaurant_menu
-                        </span>
-                    </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php">Bienvenida</a>
+                            <a class="nav-link" href="index.php">Bienvenida</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Realizar un Pedido</a>
+                            <a class="nav-link active" href="#">Realizar un Pedido</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.php">Contacto</a>
@@ -88,7 +83,7 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item ms-auto">
-                            <a class="nav-link d-flex justify-content-start align-content-start" href="#">
+                            <a class="nav-link d-flex justify-content-start align-content-start" href="usuario.php">
                                 <span class="material-icons">
                                     account_circle&nbsp;
                                 </span>
@@ -110,52 +105,28 @@
                 </div>
             </nav>
         </div>
-    <section>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-sm-3 order-2">
-                    <h2>Filtros</h2>
-                    <h6>Estamos situados en C/La Marrana nº 5, en la Ribera de Molina</h6>
-                    <div class="imagen"><img class="img-fluid" src="../img/restaurante.jpg"></div>
-                    <p>O melhor restaurante do mondo</p>
-                    <h3 class="mt-4">Enlaces</h3>
-                    <ul class="nav nav-pills flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Bienvenida</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Realizar un Pedido</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://c8.alamy.com/compes/2e8narw/yilmaz-karaman-alias-lil-maaaa-poso-en-su-restaurante-chez-diyar-un-restaurante-situado-en-el-distrito-18-de-paris-francia-el-8-de-agosto-de-2007-este-inmigrante-turco-que-vende-kebabs-lanzo-con-emi-su-primer-single-karaman-compuso-una-cancion-sobre-su-trabajo-come-kebab-come-kebab-mi-amigo-para-entretener-a-sus-clientes-habituales-afortunadamente-para-el-entre-sus-clientes-hay-algunos-empleados-de-un-estudio-de-grabacion-cercano-foto-de-jules-motte-abacapress-com-2e8narw.jpg">Kebab Amigo</a>
-                        </li>
-                    </ul>
-                    <hr class="d-sm-none">
-                </div>
-                <div class="col-sm-9 order-1">
-                    <h2>CASANOVA A LA BRASA, ESTRELLA MICHELÍN</h2>
-                    <h5>tucutucutut, 7 Marzo 2021</h5>
-                    <div><img class="img-fluid" src="../img/laostia.jpg"></div>
-                    <p>Como vuelva a ver un puto Lorem Ipsum, llamo a la Policía.</p>
+        <section>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-sm-9 order-1">
+                        <h2>PLATOS</h2>
+                    </div>
 
-                    <h2 class="mt-5">TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2020</h5>
-                    <div class="fakeimg">Fake Image</div>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+                    <div class="col-sm-3 order-2">
+                        <h2>Filtros</h2>
+                        
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="mt-5 p-4 bg-dark text-white text-center">
-            <p>Copirrai Josep Illá</p>
-        </div>
-    </footer>
+        <footer>
+            <div class="mt-5 p-4 bg-dark text-white text-center">
+                <p>Copirrai Josep Illá</p>
+            </div>
+        </footer>
 
 
 </body>

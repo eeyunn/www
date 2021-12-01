@@ -165,24 +165,17 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item ms-md-auto">
-                            <a class="nav-link d-flex justify-content-start align-content-start" data-bs-toggle="tab" href="#login">
+                            <a class="nav-link d-flex justify-content-start align-content-start" data-bs-toggle="tab" href="usuario.php">
                                 <span class="material-icons">
                                     account_circle&nbsp;
                                 </span>
                                 Usuario
                             </a>
-                            <div class="dropdown-menu p-3">
-                                <form class="form-horizontal" method="post" accept-charset="UTF-8">
-                                    <input class="form-control login" type="text" name="username2" placeholder="Username">
-                                    <input class="form-control login" type="text" name="password2" placeholder="Password">
-                                    <input class="btn btn-primary" type="button" name="submit" value="Login">
-                                </form>
-                            </div>
                         </li>
 
 
                         <li class="nav-item ms-md-auto">
-                            <a class="nav-link d-flex justify-content-start align-content-between href=" #">
+                            <a class="nav-link d-flex justify-content-start align-content-between" href="pedir.php">
                                 <span class="material-icons">
                                     logout&nbsp;
                                 </span>

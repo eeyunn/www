@@ -26,28 +26,23 @@
             </div>
 
 
-            <?php
-            //creamos la conexion
-            $conn = mysqli_connect('localHost', 'root', '');
-            //Imprimos el error si se ha producido
-            echo mysqli_error($conn);
 
-
-            //Seleccionamos la base de datos
-            mysqli_select_db($conn, 'pruebas');
-            //Imprimos el error si se ha producido
-            echo mysqli_error($conn);
-
-            mysqli_close($conn);
-
-            ?>
             <!-- Login Form -->
-            <form>
+            <form action="" method="POST">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
                 <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
                 <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
             </form>
+            <?php
+            include('conexion.php');
+            if (true) {
+                session_start();
+                if(isset($sms)&& !empty($sms) ) {
+                    echo "La suma de los número introducidos es --> $sms";
+                }
+            }
 
+            ?>
         </div>
     </div>
 </body>

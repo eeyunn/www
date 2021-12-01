@@ -102,27 +102,13 @@
         #logo {
             height: 7em;
         }
-
     </style>
 </head>
 
 <body>
-    <?php
-    //creamos la conexion
-    $conn = mysqli_connect('localHost', 'root', '');
-    //Imprimos el error si se ha producido
-    echo mysqli_error($conn);
 
-
-    //Seleccionamos la base de datos
-    mysqli_select_db($conn, 'pruebas');
-    //Imprimos el error si se ha producido
-    echo mysqli_error($conn);
-
-    mysqli_close($conn);
-
+    <?php include('conexion.php');
     ?>
-
 
     <div class="container-fluid">
         <header class="g-0">
@@ -131,7 +117,7 @@
             <div class="overlay g-0 mw-100"></div>
 
             <!-- The HTML5 video element that will create the background video on the header -->
-            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" >
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                 <source src="./img/video.mp4" type="video/mp4">
             </video>
 

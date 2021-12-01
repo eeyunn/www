@@ -12,7 +12,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <?php
+    if (isset($_POST['nomUsuario']) && isset($_POST['contrasena']) && isset($_POST['correo'])) {
+        $nomUsuario = $_POST['nomUsuario'];
+        $contrasena = $_POST['contrasena'];
+        $correo = $_POST['correo'];
+        $sms = $num1 + $num2;
+        //creamos la conexion
+        $conn = mysqli_connect('localHost', 'root', '');
+        //Imprimos el error si se ha producido
+        echo mysqli_error($conn);
 
+
+        //Seleccionamos la base de datos
+        mysqli_select_db($conn, 'pruebas');
+        //Imprimos el error si se ha producido. mysqli_error siempre va 
+        //a mostrar el error de la última función mysqli ejecutada
+        echo mysqli_error($conn);
+
+
+
+        //Me creo la consulta que voy a ejecutar. En este caso voy a obtener todas las personas de la base de datos
+        $consulta = "INSERT INTO PERSONAS VALUES ('Persona2','Apellidos2', 'Madrid',30,'Obrero','Mujer')";
+
+        //$result = mysqli_query($conn, $consulta);
+        //Imprimos el error si se ha producido. mysqli_error siempre va a mostrar el error de la última función mysqli ejecutada
+        echo mysqli_error($conn);
+
+        print("<h4>Inserción realizada correctamente</h4>");
+
+        mysqli_close($conn);
+    }
+
+
+
+    ?>
 </head>
 
 <body background="./img/fondologin.jpg">
