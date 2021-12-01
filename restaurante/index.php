@@ -176,46 +176,56 @@
         </div>
 
         <section>
-            <div class="container mt-3">
+            <div class="container">
                 <div class="row" id="mensaje">
                     <div class="col">
-
-                        <h2>Bienvenido a Casanova a la brasa,
-                            <?php
-                            print "Manuel";
-                            ?>
-                        </h2>
                         <br>
                         <img src="./img/logo.png" id="logo">
                     </div>
                 </div>
             </div>
             <br>
-            <div class="container mt-3">
+            <div class="container p-3">
                 <div class="row">
                     <div class="col-sm-4">
-                        <h2>Sobre Nosotros</h2>
-                        <h6>Estamos situados en C/La Marrana nº 5, en la Ribera de Molina</h6>
+                        <h1>Sobre Nosotros</h1>
+                        <h5>Estamos situados en C/La Marrana nº 5, en la Ribera de Molina</h5>
                         <div class="imagen"><img class="img-fluid" src="./img/restaurante.jpg"></div>
-                        <p>O melhor restaurante do mondo</p>
-                        <span class="material-icons">
-                            restaurant_menu
-                        </span>
+                        <br>
 
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d785.6947540884335!2d-1.209958370803174!3d38.02893095512016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63809c49607257%3A0x2a29ddcf394af703!2sC.%20Balsa%20Uno%2C%2018%2C%2030508%20Ribera%20de%20Molina%2C%20Murcia!5e0!3m2!1ses!2ses!4v1638364054804!5m2!1ses!2ses" class="w-100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
 
                     <div class="col-sm-8">
-                        <h2>Noticias</h2>
-                        <h2>CASANOVA A LA BRASA, ESTRELLA MICHELÍN</h2>
-                        <h5>tucutucutut, 7 Marzo 2021</h5>
-                        <div><img class="img-fluid" src="./img/laostia.jpg"></div>
-                        <p>Como vuelva a ver un puto Lorem Ipsum, llamo a la Policía.</p>
+                        <h1 class="mb-3">Noticias</h1>
+                        <?php
+                        //creamos la conexion
+                        $conn = mysqli_connect('localHost', 'root', '');
+                        //Imprimos el error si se ha producido
+                        echo mysqli_error($conn);
 
-                        <h2 class="mt-5">TITLE HEADING</h2>
-                        <h5>Title description, Sep 2, 2020</h5>
-                        <div class="fakeimg">Fake Image</div>
-                        <p>Some text..</p>
-                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        mysqli_set_charset($conn,"utf8");
+                        //Seleccionamos la base de datos
+                        mysqli_select_db($conn, 'restaurante');
+                        //Imprimos el error si se ha producido
+                        echo mysqli_error($conn);
+
+                        $result=mysqli_query($conn,"SELECT * FROM noticia");
+
+                        echo mysqli_error($conn);
+
+                        while($row=mysqli_fetch_array($result)){
+                            print("<h2>".$row[1]."</h2>");
+                            print("<img src='".$row[2]."' class='img-fluid'><br>");
+                            print("<br>");
+                            print("<p>".$row[3]."</p><hr>");
+                        }
+
+
+                        mysqli_close($conn);
+
+                        ?>
                     </div>
                 </div>
             </div>
